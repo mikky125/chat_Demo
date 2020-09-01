@@ -225,7 +225,7 @@ def processRequest(req):
         }
 
 
-#def configureDataBase():
+def configureDataBase():
     client = MongoClient("mongodb+srv://covid:8bsuv3cx1@A@cluster0.6tayq.mongodb.net/covid19DB?retryWrites=true&w=majority")
     return client.get_database('covid19DB')
 
@@ -247,9 +247,9 @@ def prepareEmail(contact_list):
     mailclient.sendEmail(contact_list)
 
 
-'''if __name__ == '__main__':
+if __name__ == '__main__':
     port = int(os.getenv('PORT'))
     print("Starting app on port %d" % port)
-    app.run(debug=False, port=port, host='0.0.0.0')'''
-if __name__ == "__main__":
-    app.run(port=5000, debug=True) # running the app on the local machine on port 8000
+    app.run(debug=False, port=port, host='0.0.0.0')
+'''if __name__ == "__main__":
+    app.run(port=5000, debug=True)''' # running the app on the local machine on port 8000
